@@ -6,9 +6,20 @@ let jammes = new Contact({
 
 let contacts = new ContactList("./src/contacts.json");
 //contacts.addContact(jammes);
+ let validContact = new Contact({
+     name: "some name",
+     phone: 12334
+    });
+ validContact.name= 3;
+ console.log(JSON.stringify(validContact));
 
-contacts.load()
+/*contacts.load()
 .then(() =>{
     contacts.addContact(jammes);
-    console.log(contacts);
-});
+    return contacts.save();
+    //console.log(contacts);
+})
+.then(()=>{
+    console.log("Contacts save successfully. ")
+})
+.catch(console.log);*/
